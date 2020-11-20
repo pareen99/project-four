@@ -1,61 +1,98 @@
-.cd-h-timeline__events {
-    position: relative;
+body {
+    margin: 0;
+    padding: 20px;
   }
   
-  .cd-h-timeline__event {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    left: 0;
-    top: 0;
-    transform: translateX(-100%);
-    opacity: 0;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+  .path {
+    stroke-dasharray: 3710;
+    stroke-dashoffset: 3710;
+    transition: 1s all;
   }
   
-  .cd-h-timeline__event--selected { // selected event info
-    position: relative;
-    z-index: 2;
-    opacity: 1;
-    transform: translateX(0);
+  #step-zero {
+    stroke-dashoffset: 3710;
+  }
+
+  #step-one {
+    stroke-dashoffset: 3180;
   }
   
-  .cd-h-timeline__event--enter-right, 
-  .cd-h-timeline__event--leave-right { // animate event info
-     animation-name: cd-enter-right;
+  #step-two {
+    stroke-dashoffset: 2650;
   }
   
-  .cd-h-timeline__event--enter-left,  
-  .cd-h-timeline__event--leave-left { // animate event info
-     animation-name: cd-enter-left;
+  #step-three {
+    stroke-dashoffset: 2120;
+  }
+
+  #step-four {
+      stroke-dashoffset:1590 ;
+  }
+
+  #step-five {
+    stroke-dashoffset:1060 ;
+}
+
+#step-six {
+    stroke-dashoffset:530 ;
+}
+
+#step-seven {
+    stroke-dashoffset:0 ;
+}
+  
+  .circle {
+    padding: 40px;
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    margin: 0 auto;
   }
   
-  .cd-h-timeline__event--leave-right, 
-  .cd-h-timeline__event--leave-left {
-     animation-direction: reverse;
+  .cards {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
   }
   
-  @keyframes cd-enter-right {
-     0% {
-        opacity: 0;
-        transform: translateX(100%);
-     }
-  
-     100% {
-        opacity: 1;
-        transform: translateX(0%);
-     }
+  .card {
+    margin-right: 10px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 15px;
   }
-  
-  @keyframes cd-enter-left {
-     0% {
-        opacity: 0;
-        transform: translateX(-100%);
-     }
-  
-     100% {
-        opacity: 1;
-        transform: translateX(0%);
-     }
-  }
+
+  /*Buttons*/
+  a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+  float: right;
+}
+
+.round {
+  border-radius: 50%;
+}
