@@ -35,37 +35,39 @@ var options = {
     observer.observe(target);
   });
 
-/*timeline*/
-
-/ Globals
+  /*timeline*/
+ // Globals
 var prefixes         = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-var $container       = $('.container');
-var $timeline        = $('.timeline');
-var $timelineItem    = $('.timeline-item');
-var $timelineContent = $('.timeline-content');
-var $dropDown        = $('.dropdown');
-var $hasHovered      = true;
-var hideOnExit       = false;
+var container = document.querySelector("container");
+var timeline = document.querySelector("timeline");
+var timelineItem = document.querySelector("timelineItem");
+var timelineContent = document.querySelector("timelineContent");
+var dropDown  = document.querySelector("dropDown ");
+var hasHovered   = true;
+var hideOnExit   = true;
+
+
+
 
 // mouseenter event handler
-$timelineItem.on('mouseenter', function(e) {
+timelineItem.on('mouseenter', function(e) {
   
-  var isSelected = $(this).hasClass('selected');
+  var isSelected = document.querySelector(this).hasClass('selected');
   
   if ( isSelected === false ) {
   
-    var leftPos = $(this).position().left,
+    var leftPos = document.querySelector(this).position().left,
         left    = leftPos - 88,
-        $that   = $(this);
+        document.querySelector("that")   = (this);
 
-    $timelineItem.removeClass('selected');
-    $(this).addClass('selected');
+    timelineItem.removeClass('selected');
+    document.querySelector(this).addClass('selected');
 
-    if ( $hasHovered === false ) {
+    if ( hasHovered === false ) {
       // Show Bounce
 
         // Set Flag
-        $hasHovered = true;
+        hasHovered = true;
 
         // Show DD Bounce
         showBounce(left);
@@ -80,38 +82,38 @@ $timelineItem.on('mouseenter', function(e) {
         dropDownFollow(left);
 
         // Hide previous dd content
-        $timelineContent.removeClass('animated fadeIn bounceIn');
+        timelineContent.removeClass('animated fadeIn bounceIn');
 
         // Show hovered dd content
-        $that.find($timelineContent).addClass('animated fadeIn');
+        that.find(timelineContent).addClass('animated fadeIn');
     }
   }
   
 });
 
 // mouseleave event handler
-$timeline.on('mouseleave', function(e) {
+timeline.on('mouseleave', function(e) {
   
   if (hideOnExit) {
    
     //   Set Flag
-    $hasHovered = false;
+    hasHovered = false;
 
     // Hide DD
     hideDropDown();
 
     // Hide DD content
-    $timelineContent.removeClass('animated fadeIn');
+    timelineContent.removeClass('animated fadeIn');
     
   }
   
 });
 
 // Animation end event listener
-$dropDown.on(prefixes, function(e) {
+dropDown.on(prefixes, function(e) {
   
   if ( e.originalEvent.animationName === 'fadeOut' ) {
-    $dropDown.removeAttr('style');
+    dropDown.removeAttr('style');
   }
   
 });
@@ -120,19 +122,20 @@ $dropDown.on(prefixes, function(e) {
 * Private functions that do showing/hiding/animating
 */
 function showContentBounce(that) {
-  $hasBounced = true;
-  that.find('.timeline-content').addClass('animated bounceIn');
+  hasBounced = true;
+  document.querySelector(that).find('.timeline-content').addClass('animated bounceIn');
 }
 
 function showBounce(pos) {
-  $dropDown.css('left', pos + 'px').removeClass('fadeOut').addClass('animated bounceIn');
+  dropDown.css('left', pos + 'px').removeClass('fadeOut').addClass('animated bounceIn');
 }
 
 function dropDownFollow(pos) {
-  $dropDown.css('left', pos + 'px');
+  dropDown.css('left', pos + 'px');
 }
 
 function hideDropDown() {
-  $timelineItem.removeClass('selected');
-  $dropDown.removeClass('bounceIn').addClass('fadeOut');
-}    
+  timelineItem.removeClass('selected');
+  dropDown.removeClass('bounceIn').addClass('fadeOut');
+}
+
