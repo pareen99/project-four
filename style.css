@@ -10,6 +10,14 @@ nav {
     top: 0;
     align-items: center;
   }
+  footer {
+    background: rgb(0, 0, 0);
+    height: 60px;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    
+  }
 
   /*body*/
 body {
@@ -55,7 +63,7 @@ body {
 #step-seven {
     stroke-dashoffset:0 ;
 }
-  
+@media (max-width:767px) { 
   .circle {
     padding: 40px;
     width: 130px;
@@ -84,6 +92,7 @@ body {
     padding: 40px;
     border-radius: 15px;
   }
+}
 
 /*desktop styles*/
 @media (min-width: 768px) {
@@ -93,6 +102,10 @@ main {
 
 main > div {
   width: 100%;
+}
+
+.intro {
+  position: sticky;
 }
 
 .card {
@@ -110,12 +123,13 @@ main > div {
 
 
 .circle {
-  width: 300px;
+  width: 700px;
   height: 300px;
   background: white;
   margin: 10px;
   position: sticky;
-  top: 70px;
+  top: 210px;
+  left: 210px;
 }
 }
  
