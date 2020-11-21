@@ -4,7 +4,6 @@ footer {
   width: auto;
   position: sticky;
   margin-bottom: 0;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,12 +19,13 @@ footer > p > a {
   font-size: 10pt;
 }
 
+
 .button {
   background-color: white; 
-  color: black; 
+  color: red; 
   border: 2px solid #ff0000;
-  padding: 10px 20px;
-  font-size: 11.5pt;
+  padding: 6px 16px;
+  font-size: 13pt;
 }
 
 .button:hover {
@@ -96,6 +96,11 @@ body {
   nav > button {
     margin-right: 5px;
   }
+
+  footer {
+    margin-top: 121px;
+  }
+
   /*map*/
   .circle {
     padding: 40px;
