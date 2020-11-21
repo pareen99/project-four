@@ -1,29 +1,26 @@
-/*navbar*/
-nav img {
-  height: 90px;
-  width: auto;
-}
-nav {
-    background: rgb(0, 0, 0);
-    height: 60px;
-    position: sticky;
-    top: 0;
-    align-items: center;
-  }
+
   footer {
     background: rgb(0, 0, 0);
-    height: 60px;
+    height: 40px;
+    width: auto;
     position: sticky;
     bottom: 0;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+  }
+  
+footer > p> a {
+    color: white;
+    font-size: 10pt;
   }
 
   /*body*/
 body {
     margin: 0;
     padding: 20px;
-  }
+  } 
   
   .path {
     stroke-dasharray: 3710;
@@ -63,7 +60,28 @@ body {
 #step-seven {
     stroke-dashoffset:0 ;
 }
+/*mobile styles*/
 @media (max-width:767px) { 
+ /*navbar*/
+  nav {
+      background: rgb(0, 0, 0);
+      height: 60px;
+      position: sticky;
+      top: 0;
+      display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    }
+    nav img {
+      height: 40px;
+      width: auto;
+      padding-left: 5px;
+    }
+
+    nav > button {
+      margin-right: 5px;
+    }
+/*map*/
   .circle {
     padding: 40px;
     width: 130px;
@@ -72,7 +90,7 @@ body {
     border-radius: 100%;
     margin: 0 auto;
   }
-  
+  /*timeline*/
   .cards {
     display: flex;
     overflow-x: scroll;
@@ -88,7 +106,7 @@ body {
     box-sizing: border-box;
     flex: 0 0 100%;
     margin-top: 20px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba(255, 3, 3, 0.413);
     padding: 40px;
     border-radius: 15px;
   }
@@ -96,6 +114,25 @@ body {
 
 /*desktop styles*/
 @media (min-width: 768px) {
+  /*navbar*/
+  nav img {
+    height: 30px;
+    width: auto;
+    padding-left: 10px;
+  }
+  nav {
+      background: rgb(0, 0, 0);
+      height: 50px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content:space-between ;
+      align-items: center;
+    }
+    nav > button {
+      margin-right: 10px;
+    }
+    /*columns*/
 main {
   display: flex;
 }
@@ -103,11 +140,11 @@ main {
 main > div {
   width: 100%;
 }
-
+/*introduction*/
 .intro {
   position: sticky;
 }
-
+/*timeline*/
 .card {
   height: 300px;
   background:white;
@@ -115,13 +152,12 @@ main > div {
     box-sizing: border-box;
     flex: 0 0 100%;
     margin-top: 20px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba(255, 3, 3, 0.413);
     padding: 30px;
     border-radius: 15px;
 }
 
-
-
+/*map*/
 .circle {
   width: 700px;
   height: 300px;
