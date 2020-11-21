@@ -1,87 +1,89 @@
+footer {
+  background: rgb(0, 0, 0);
+  height: 40px;
+  width: auto;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  footer {
-    background: rgb(0, 0, 0);
-    height: 40px;
-    width: auto;
-    position: sticky;
-    bottom: 0;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
-  }
-  
-footer > p> a {
-    color: white;
-    font-size: 10pt;
-  }
+footer p {
+  text-align: center;
+  width: 100%;
+}
 
-  /*body*/
+footer > p > a {
+  color: white;
+  font-size: 10pt;
+}
+
+/*body*/
 body {
-    margin: 0;
-    padding: 20px;
-  } 
-  
-  .path {
-    stroke-dasharray: 3710;
-    stroke-dashoffset: 3710;
-    transition: 1s all;
-  }
-  
-  #step-zero {
-    stroke-dashoffset: 3710;
-    }
+  margin: 0;
+}
 
-  #step-one {
-    stroke-dashoffset: 3180;
-  }
-  
-  #step-two {
-    stroke-dashoffset: 2650;
-  }
-  
-  #step-three {
-    stroke-dashoffset: 2120;
-  }
+.path {
+  stroke-dasharray: 3710;
+  stroke-dashoffset: 3710;
+  transition: 1s all;
+}
 
-  #step-four {
-      stroke-dashoffset:1590 ;
-  }
+#step-zero {
+  stroke-dashoffset: 3710;
+}
 
-  #step-five {
-    stroke-dashoffset:1060 ;
+#step-one {
+  stroke-dashoffset: 3360;
+}
+
+#step-two {
+  stroke-dashoffset: 3110;
+}
+
+#step-three {
+  stroke-dashoffset: 2760;
+}
+
+#step-four {
+  stroke-dashoffset: 2510;
+}
+
+#step-five {
+  stroke-dashoffset: 2260;
 }
 
 #step-six {
-    stroke-dashoffset:530 ;
-    
+  stroke-dashoffset: 1910;
 }
 
 #step-seven {
-    stroke-dashoffset:0 ;
+  stroke-dashoffset: 1290;
 }
 /*mobile styles*/
-@media (max-width:767px) { 
- /*navbar*/
+@media (max-width: 767px) {
+  /*navbar*/
   nav {
-      background: rgb(0, 0, 0);
-      height: 60px;
-      position: sticky;
-      top: 0;
-      display: flex;
-    justify-content:space-between ;
+    background: rgb(0, 0, 0);
+    height: 60px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    }
-    nav img {
-      height: 40px;
-      width: auto;
-      padding-left: 5px;
-    }
+  }
+  nav img {
+    height: 40px;
+    width: auto;
+    padding-left: 5px;
+  }
 
-    nav > button {
-      margin-right: 5px;
-    }
-/*map*/
+  nav > button {
+    margin-right: 5px;
+  }
+  /*map*/
   .circle {
     padding: 40px;
     width: 130px;
@@ -100,7 +102,7 @@ body {
     scroll-behavior: smooth;
     display: flex;
   }
-  
+
   .card {
     margin-right: 10px;
     box-sizing: border-box;
@@ -121,51 +123,51 @@ body {
     padding-left: 10px;
   }
   nav {
-      background: rgb(0, 0, 0);
-      height: 50px;
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content:space-between ;
-      align-items: center;
-    }
-    nav > button {
-      margin-right: 10px;
-    }
-    /*columns*/
-main {
-  display: flex;
-}
+    background: rgb(0, 0, 0);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav > button {
+    margin-right: 10px;
+  }
+  /*columns*/
+  main {
+    display: flex;
+    padding: 0 20px;
+  }
 
-main > div {
-  width: 100%;
-}
-/*introduction*/
-.intro {
-  position: sticky;
-}
-/*timeline*/
-.card {
-  height: 300px;
-  background:white;
-  margin: 5px;
+  main > div {
+    width: 100%;
+  }
+  /*introduction*/
+  #intro {
+    box-shadow: none;
+    margin-bottom: 50vh;
+  }
+  /*timeline*/
+  .card {
+    height: 300px;
+    background: white;
+    margin: 50vh 5px;
     box-sizing: border-box;
     flex: 0 0 100%;
     margin-top: 20px;
     box-shadow: 0 0 5px 0 rgba(255, 3, 3, 0.413);
     padding: 30px;
     border-radius: 15px;
-}
+  }
 
-/*map*/
-.circle {
-  width: 700px;
-  height: 300px;
-  background: white;
-  margin: 10px;
-  position: sticky;
-  top: 210px;
-  left: 210px;
+  /*map*/
+  .circle {
+    background: white;
+    margin: 0 auto;
+    position: sticky;
+    top: 210px;
+    padding: 20px;
+    max-width: 500px;
+  }
 }
-}
- 
